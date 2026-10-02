@@ -23,3 +23,25 @@ Format : `<type>(<portée optionnelle>): <description>`
 | revert   | annulation d'un commit  |
 
 Exemple : `feat(events): ajoute la création d'un événement`
+
+## Workflow Git
+
+```mermaid
+gitGraph
+  commit id: "init"
+  branch dev
+  checkout dev
+  branch feature/inscription
+  checkout feature/inscription
+  commit id: "feat: inscription"
+  checkout dev
+  merge feature/inscription id: "PR vers dev"
+  checkout main
+  merge dev id: "PR vers main"
+```
+
+| Branche                      | Rôle               | Règles                                                             |
+| ---------------------------- | ------------------ | ------------------------------------------------------------------ |
+| `main`                       | production         | protégée, modifiée uniquement par PR depuis `dev`                  |
+| `dev`                        | intégration        | protégée, modifiée uniquement par PR depuis une branche éphémère   |
+| `feature/<nom>`, `fix/<nom>` | branches éphémères | créées depuis `dev`, fusionnées dans `dev` par PR, puis supprimées |
