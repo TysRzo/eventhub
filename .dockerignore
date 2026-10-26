@@ -1,0 +1,17 @@
+# Dépendances, réinstallées dans l'image par npm ci
+node_modules
+npm-debug.log*
+
+# Historique Git et outils de dev
+.git
+.husky
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Fichiers sans rapport avec l'application
+Screenshot
+*.md
+.DS_Store
