@@ -1,8 +1,8 @@
 # EventHub
 
-## Conventions de commit
+Application de gestion d'événements, réalisée dans le cadre du bachelor Développeur Cybersécurité de la 3W Academy.
 
-Application
+## Conventions de commit
 
 Ce projet suit [Conventional Commits](https://www.conventionalcommits.org/fr/v1.0.0/).
 
